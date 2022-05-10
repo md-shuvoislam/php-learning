@@ -118,7 +118,7 @@ switch ($favcolor) {
 for ($key=0; $key < count($game_genres); $key++) { 
     if(is_array($game_genres[$key])){
         for ($key2=0; $key2 < count($game_genres[$key]); $key2++) { 
-            echo $game_genres[$key][$key2].BR;
+            echo $game_genres[$key][$key].BR;
         }
     }
     else{
@@ -143,3 +143,85 @@ do {
   echo "The number is: $x <br>";
   $x++;
 } while ($x <= 5);
+
+
+// get the lenght of the string "Hello world"
+
+echo strlen("Hello World");
+
+echo BR;
+
+// Reverse the string "Hello World"
+
+echo strrev("Hello World!");
+
+echo BR;
+
+// Example to Replace Text within a String using PHP str_replace() function
+
+$oldtext = "Hello world";
+
+echo str_replace("world","Dolly","Hello world");
+
+echo BR;
+
+// Output "1" if $a is equal to $b, print "2" if $a is greater than $b, otherwise output "3".
+
+$a = 50;
+$b = 10;
+
+if ($a == $b) {
+    echo "1";
+}elseif($a > $b){
+    echo "2";
+}else{
+    echo "3";
+}
+
+echo BR;
+
+// Create a loop that runs from 0 to 9.
+
+for ($i = 0; $i < 10; $i++){
+    echo $i.BR;
+}
+
+echo BR;
+
+// Loop through the items in the $colors array.
+
+$colors = array("red", "green", "blue", "yellow");
+
+foreach($colors as $x){
+    echo $x;
+}
+
+echo BR;
+
+// Create a function named myFunction.
+
+function myFunction(){
+    echo "Hello World!";
+}
+
+echo myFunction();
+
+
+// Use the correct function to output the number of items in an array.
+
+$fruits = array("Apple","Banana","Orange");
+echo count($fruits);
+
+echo BR;
+
+//Use the correct array method to sort the $colors array descending alphabetically.
+
+$colors = array("red", "green", "blue", "yellow");
+sort($colors);
+echo BR;
+print_r($colors);
+
+//Sorting Associative Arrays in Descending Order By Value
+
+$age = array("peter"=>20, "hurry"=>14, "John"=>45, "Clark"=>35);
+
