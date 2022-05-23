@@ -25,15 +25,31 @@
                 echo '<tr><td>' . $filter . '</td><td>' . filter_id($filter) . '</td></tr>';
             }
         ?>
+    </table>
+    <br>
+    <br>
+    <?php
 
-        <br>
+        // Sanitize a String, The following example uses the filter_var() function to remove all HTML tags from a string:
 
-        <?php
         $str = "<h1>Hello world!</h1>";
         $newstr = filter_var($str, FILTER_SANITIZE_STRING);
         echo $newstr;
         ?>
 
-    </table>
+        <br>
+        
+        <?php
+
+        $int = 122;
+        $min = 1;
+        $max = 200;
+
+        if (filter_var($int, FILTER_VALIDATE_INT, array("options" => array("min_range"=>$min, "max_range"=>$max))) === false) {
+            echo ("Variable value is not within the legal range");
+        }else{
+            echo ("Variable value is within the legal");
+        }
+        ?>
 </body>
 </html>
